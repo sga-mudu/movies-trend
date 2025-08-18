@@ -1,0 +1,141 @@
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.input-here {
+  width: 70%;
+  padding: 12px 20px;
+  margin-right: 10px;
+  border: 2px solid #3498db;
+  border-radius: 25px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.input-here:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+button {
+  padding: 12px 25px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.movie-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 15px;
+}
+
+.movie-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.movie-info p {
+  margin: 5px 0 0;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-message {
+  text-align: center;
+  color: #e74c3c;
+  padding: 15px;
+  background-color: #fadbd8;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-here {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
