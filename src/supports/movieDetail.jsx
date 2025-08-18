@@ -10,11 +10,13 @@ function MovieDetail() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    Axios.get(`https://www.omdbapi.com/?apikey=15690a23&i=${id}`)
+    Axios.get(`https://www.omdbapi.com/?apikey=5d1f55f3&i=${id}`)
       .then((response) => {
         setMovie(response.data);
+        console.log(response.data);
       });
   }, [id]);
+  console.log(id);
 
   if (!movie){
     return <div className="loading-spinner">

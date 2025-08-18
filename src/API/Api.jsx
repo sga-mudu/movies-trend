@@ -22,6 +22,7 @@ function Api() {
                     setGeneratedAPI(null);
                 } else {
                     setGeneratedAPI(response.data.Search);
+                    console.log(response.data);
                 }
             })
             .catch(err => {
